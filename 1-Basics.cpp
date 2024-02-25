@@ -12,7 +12,8 @@ int main() {
     int x = 5; // Copy initialization
     int y(7); // Direct initialization. Introduced for more efficient initialization for complex objects
     int z {10}; // List initialization. A modern way to initialize variables apparently. 
-    std::cout << x << std::endl << y << std::endl  << z << std::endl;
+    int v {2+4};
+    std::cout << x << std::endl << y << std::endl  << z << std::endl << v << std::endl;
 
     // Literal vs Operators 
     std::cout << 5 << std::endl; // Value 5 is a literal
