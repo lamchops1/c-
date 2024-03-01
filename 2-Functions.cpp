@@ -1,5 +1,9 @@
 #include <iostream>
 
+// These are macros. Rarely used but mostly for performance optimization, code reusability and simplification.
+#define MY_NAME "Alex"
+#define PRINT_JOE
+
 // Void function has no return
 void display()
 {
@@ -22,7 +26,7 @@ void noNamespace()
 {
     // This allows you to access names in the "std" namespace without using "std"
     using namespace std;
-    cout << "Hello world";
+    cout << "Hello world" << std::endl;
 
 }
 
@@ -38,8 +42,23 @@ int main()
 
     noNamespace();
 
+    std::cout << MY_NAME << std::endl;
+
+    // If PRINT_JOE is defined, then "Joe" will be printed out 
+    #ifdef PRINT_JOE 
+        std::cout << "Joe" << std::endl;
+    #endif
+
+    // If PRINT_JOE is not defined, then "Joe" will be printed out
+    #ifndef PRINT_JOE 
+        std::cout << "Joe" << std::endl;
+    #endif
     
     return 0;
 }
 
 
+// FACTS
+// The entire process of preprocessing, compiling, and linking is called translation
+// The preprocessor replaces the #include directive with the contents of the included file
+// Header files are used to declare functions in one place
