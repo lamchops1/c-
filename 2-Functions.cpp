@@ -26,7 +26,7 @@ void noNamespace()
 {
     // This allows you to access names in the "std" namespace without using "std"
     using namespace std;
-    cout << "Hello world" << std::endl;
+    cout << "Hello world" << endl;
 
 }
 
